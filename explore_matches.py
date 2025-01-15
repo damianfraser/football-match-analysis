@@ -18,13 +18,20 @@ except sqlite3.OperationalError as e:
     print(f"Error: {e}")
     exit()
 
-# Query to get column names of the Match table
-query = "PRAGMA table_info(Match);"
-columns_info = conn.execute(query).fetchall()
+tables_query = "SELECT name FROM sqlite_master WHERE type='table';"
+tables = conn.execute(tables_query).fetchall()
 
-# Extract and print column names
-column_names = [info[1] for info in columns_info]
-print("Column Names in the Match Table:")
-print(column_names)
+# Print the table names
+print("Tables in the Database:")
+for table in tables:
+    print(table[0])
+
+    # For each table, get the column names
+    columns_query = f"PRAGMA table_info({table[0]});"
+    columns_info = conn.execute(columns_query).fetchall()
+    column_names = [info[1] for info in columns_info]
+
+    print(f"Column Names in the {table[0]} Table:")
+    print(column_names)
 conn.close()
 print("Database connection closed.")
