@@ -1,4 +1,4 @@
-# Football Match Analysis
+# Project 1: Football Home Advantage Analysis (home_advantage_analysis.ipynb)
 
 This project analyzes football matches using the Soccer dataset from Kaggle. The dataset includes information about matches, players, teams, and betting odds from multiple European leagues for seasons 2008–2016. 
 
@@ -21,6 +21,11 @@ The dataset is sourced from [Hugo Mathien's Soccer Dataset](https://www.kaggle.c
 - Visualize trends in player and team performance over seasons.
 
 ---
+
+
+# Project 2: Football Home Advantage Analysis (home_advantage_analysis.ipynb)
+
+https://www.kaggle.com/datasets/secareanualin/football-events/data
 
 ## Installation and Setup
 
